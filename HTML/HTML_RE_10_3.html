@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>table tag</title>
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>이름</th><th>성별</th><th>주소</th>><th>회비</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>최진혁</td><td>남</td><td rowspan = "2">청주</td><td>10000</td>
+                </tr>
+                <tr>
+                    <td>최유빈</td><td>여</td><td>5000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan = "3">합계</td><td>15000</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+
+<!-- td tag의 속성 rowspan은 수직으로 병합을 의미함 --> 
+<!-- td tag의 속성 colspan은 수평으로 병합을 의미함 -->
+<!-- ex) td rowspan = "2"는 수직으로 2칸 병합 -->
+<!-- ex) td colspan = "3"은 수평으로 3칸 병합 -->
