@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form_method</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action = "http://localhost/method.php" method = "POST">
+            <p>
+                <input type = "text" name = "id">
+                <input type = "password" name ="password">
+            </p>
+            <input type = "submit">
+        </form>
+    </body>
+</html>
+
+<!-- get 방식과 post 방식 -->
+<!-- post 방식 == 비밀번호와 같이 url에 감춰야할 것을 다룰 때 사용 / URL이 아닌 다른 곳을 통해 데이터 전송 (데이터를 전송) -->
+<!-- get 방식 == url에 감추지 않아도 될 것을 다룰 때 사용 / URL을 통해 데이터 전송 -->
+<!-- form을 이용해 데이터를 전송한다면 post 방식으로 사용 -->
