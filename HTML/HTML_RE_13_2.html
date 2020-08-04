@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form_choice2</title>
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <form action = "http://localhost/order.php">
+            <p>
+                <h1>색상 (단일선택)</h1>
+                붉은색 : <input type ="radio" name = "choice" value = "red">
+                검은색 : <input type ="radio" name = "choice" value = "black" checked>
+                파란색 : <input type ="radio" name = "choice" value = "blue">
+            </p>
+            <p>
+                <h1>사이즈 (다중선택)</h1>
+                95 : <input type = "checkbox" name = "choice2" value="95">
+                100 : <input type = "checkbox" name = "choice2" value="100">
+                105 : <input type = "checkbox" name = "choice2" value="105">
+            </p>
+            <input type = "submit">
+        </form>
+    </body>
+</html>
+
+<!-- radio button은 name이 같으면 grouping되는데, 하나만 선택 가능, 중복 선택 불가 -->
+<!-- checkbox는 name이 같아도 중복 선택 가능 -->
+<!-- 처음부터 선택돈 것을 원한다면 속성에 checked 추가 -->
