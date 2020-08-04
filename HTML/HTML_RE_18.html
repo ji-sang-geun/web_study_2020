@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form_file_upload</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action ="http://localhost/upload.php" method = "post" enctype="multipart/form-data">
+            <p>
+                <input type = "file" name = "profile">
+            </p>
+            <input type = "submit">
+        </form>
+    </body>
+</html>
+
+<!-- input type에도 이름이 있어야 함-->
+<!-- form tag 속성 중 action에 담긴 url은 서버환경이 구축되어야만 사용할 수 있음 -->
+<!-- 기능 중 file을 업로드하는 기능이 단 하나라도 있다면 form tag의 속성 중 method는 post, enctype은 multipart/form-data라고 무조건 지정해야함 -->
+<!-- php 주소가 있으니, php 코드도 필요로 함 -->
+
+<!-- 서버 엔지니어(백엔드)의 요구대로 이름 설정 권장 -->
