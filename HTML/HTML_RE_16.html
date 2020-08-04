@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form_label</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action = "">
+            <p>
+                <label for="id_txt">Text : </label>
+                <input id = "id_txt" type = "text" name = "id" value = "Default Value">
+            </p>
+            <p>
+                <label for="password_txt">Password : </label>
+                <input id = "password_txt" type = "password" name = "password" value = "Default Value">
+            </p>
+            <p>
+                <label >Textarea : 
+                    <textarea rows = "3">Default Value</textarea>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type = "checkbox" name = "color" value = "red">붉은색
+                </label>
+                <label for = "color_blue">
+                    <input id = "color_blue" type = "checkbox" name = "color" value = "red">붉은색
+                </label>
+            </p>
+        </form>
+    </body>
+</html>
+
+<!-- label은 무언가의 이름표 -->
+<!-- label tag의 속성 중 for과 input tag의 속성 중 id와 값이 같으면 label이 성립됨 -->
+<!-- 또 다른 방법으로는, 그냥 아예 통째로 label tag 안에 넣으면 성립됨 -->
