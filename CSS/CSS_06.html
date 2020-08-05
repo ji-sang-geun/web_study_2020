@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>가상 클래스 선택자</title>
+        <meta charset = "utf-8">
+        <style>
+            a:link{
+                color:black;
+            }
+            a:visited{
+                color:red;
+            }
+            a:active{
+                color:green;
+            }
+            a:hover{
+                color:yellow;
+            }
+            a:focus{
+                color:white;
+            }
+            input:focus
+            {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <a href ="https://www.google.com">방문함</a>
+        <a href ="https://www.naver.com">방문안함</a>
+    </body>
+</html>
+
+<!-- :active == 마우스를 클릭 했을 때 상황 -->
+<!-- :hover == 마우스를 롤오버 했을 때 상황 -->
+<!-- :link == 방문한 적 없는 링크 -->
+<!-- :visited == 방문한 적 있는 링크, 보안적인 문제로 인해 사용할 수 있는 속성이 제한됨 -->
+<!-- 사용할 수 있는 속성 : color, background-color, border-color, outline-color, The color parts of the fill and stroke properties -->
+<!-- :focus == 포커싱되었을 때 상황, 가장 뒤에 위치하게 하는 것이 좋음 -->
