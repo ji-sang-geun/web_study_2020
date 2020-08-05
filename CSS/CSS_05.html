@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>부모 자식 선택자</title>
+        <meta charset="utf-8">
+        <style>
+            ul li{
+                color : red;
+            }
+            #lecture>li{
+                border:1px solid red;
+                color:blue;
+            }
+            ul,ol{
+                background-color: powderblue;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol id="lecture">
+            <li>HTML</li>
+            <li>CSS</li>
+            <ol>
+                <li>selector</li>
+                <li>declartion</li>
+            </ol>
+            <li>JavaScript</li>
+        </ol>
+    </body>
+</html>
+
+<!-- ul li는 조상 자손 선택자를 의미하며, ul 밑에 있는 모든 tag들을 선택 -->
+<!-- #lecture은 부모 자식 선택자를 의미하며, 바로 밑에 있는 li tag만 선택 -->
+<!-- ul,ol은 친구 선택자를 의미하며, ul과 ol tag를 동시에 선택 -->
+<!-- 친구 선택자라는 용어는 없지만 의미만 기억해둘 것. -->
