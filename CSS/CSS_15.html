@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box-sizing</title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            div{
+                margin:10px;
+                width:300px;
+            }
+            #small{
+                border:10px solid black;
+            }
+            #large{
+                border:30px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="small">Hello</div>
+        <div id="large">Hello</div>
+    </body>
+</html>
+
+<!-- div 속성의 width 값이 150px이란 것은 contents가 있는 영역의 width가 150px이란 것이지 절대 테두리의 width가 150px이라는 것이 아님 -->
+<!-- 상자의 테두리를 포함한 크기를 바로 보기가 힘듬 따라서, 직관적으로 바로 정보를 볼 수 있는 box-sizing이 필요로함 -->
+<!-- box-sizing이 border-box면, 테두리를 포함한 크기를 지정할 수 있음 -->
+
