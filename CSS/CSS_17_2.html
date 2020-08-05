@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>포지션2</title>
+        <meta charset="utf-8">
+        <style>
+            #parent, #other, #grand{
+                border:5px solid tomato
+            }
+            #grand{
+                position: relative;
+            }
+            #me{
+                background-color: black;
+                color:white;
+                position: absolute;
+                left:0px;
+                top:0px;
+                /* width:200px;
+                height:100px; */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="other">other</div>
+        <div id="grand">
+            <div id="parent">
+                parent
+                <div id="me">me</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- position이 relative면, 값에 따라 부모 element 기준으로 움직임. -->
+<!-- position이 absolute면, 값에 따라 html 기준으로 움직임. -->
+<!-- position이 absolute인데, left, right, top, bottom 모두 없으면, 부모 element를 기준으로 그 위치가 기본값으로 left와 top값이 지정. 따라서 부모 element 밑에 위치함. -->
+<!-- position이 absolute면, 부모 element와 링크가 끊기면서 관계가 사라짐. -->
+<!-- grand의 경우, position이 relative라서 grand를 기준으로 포지션, offset값을 매김 -->
+<!-- 그래서 grand position 값을 static이 아닌 다른 값을 주면 position이 absolute인 me element는 static이 아닌 부모가 나타날 때 까지 무시, 나타나면 그 부모의 위치 기준으로 offset값 지정. -->
+<!-- 상대적인 것 : 부모위치 기준. / 절대적인 것 : 부모 중 포지션 타입이 지정된 부모를 기준으로 해서 위치가 지정, 부모와 관계성이 끊기기 때문에, 자신의 크기는 자신의 컨텐츠 크기만 해짐. 부모 역시 자식을 없는 셈 침. -->
