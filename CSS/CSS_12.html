@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>캐스케이딩</title>
+        <meta charset="utf-8">
+        <style>
+            li{
+                color: red;
+            }
+            #id_selector{
+                color: blue;
+            }
+            .class_selector{
+                color: green;
+            }
+            li{
+                color: pink
+                !important; 
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li id="id_selector" class="class_selector" style="color:powderblue">CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol>
+            <li>style attribute</li>
+            <li>id selector</li>
+            <li>class selector</li>
+            <li>tag selector</li>
+        </ol>
+    </body>
+</html>
+
+<!-- 우선 순위 : style attribute > id_selector > class_selector > tag_selector -->
+<!-- 구체적인(정교한) 선택자 : 1. tag selector 2. class selector 3. id selector 4. style attribute(속성) -->
+<!-- 우선 순위를 뛰어 넘고 싶다면 권장하는 방식은 아니지만 !important 사용하기 -->
