@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>마진겹침 현상3</title>
+        <meta charset="utf-8">
+        <style>
+            #empty{
+                margin-top: 50px;
+                margin-bottom: 100px;
+                /* border:1px solid tomato; */
+            }
+            #normal{
+                background-color: powderblue;
+                margin-top:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="empty"></div>
+        <div id="normal">normal</div>
+    </body>
+</html>
+
+<!-- 만약 어떤 tag의 시각적 요소가 없으면, tag의 margin값은 윗쪽에 있는 margin값과 아랫쪽에 있는 margin값 중 더 큰 값이 그 tag의 마진 값이 됨 -->
