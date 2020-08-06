@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex4</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                display: flex;
+                align-items:center;
+                justify-content: center;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                width:800px;
+                border: 1px solid gray;
+            }
+            header{
+                border-bottom:1px solid gray;
+                padding-left: 20px;
+            }
+            footer{
+                border-top:1px solid gray;
+                padding :20px;
+                text-align: center;
+            }
+            .content{
+                display: flex;
+            }
+            .content nav{
+                border-right:1px solid gray;
+            }
+            .content aside{
+                border-left: 1px solid gray;
+            }
+            nav,aside{
+                flex-basis:150px;
+                flex-shrink: 0;
+            }
+            main{
+                padding:10px;
+            }
+            nav{
+                order:-1;
+            }
+            /* nav{
+                order:0;
+            }
+            main{
+                order:1;
+            }
+            aside{
+                order:2;
+            } */
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>생활코딩</h1>
+            </header>
+            <section class="content">
+                <main>
+                    생활코딩은 일반인을 위한 코딩 수업입니다.
+                </main>
+                <nav>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </nav>
+                <aside>
+                    AD
+                </aside>
+            </section>
+            <footer>
+               <a href= "https://www.google.com">홈페이지</a>" 
+            </footer>
+        </div>
+    </body>
+</html>
+
+<!-- 여기서 사용된 Properties for the Flex container : align-items, justify-content -->
+<!-- 여기서 사용된 Properties for the Flex items : Flex, order -->
