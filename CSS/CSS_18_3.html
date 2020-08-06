@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex3</title>
+        <meta charset="utf-8">
+        <style>
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            header{
+                border-bottom:1px solid gray;
+                padding-left: 20px;
+            }
+            footer{
+                border-top:1px solid gray;
+                padding :20px;
+                text-align: center;
+            }
+            .content{
+                display: flex;
+            }
+            .content nav{
+                border-right:1px solid gray;
+            }
+            .content aside{
+                border-left: 1px solid gray;
+            }
+            nav,aside{
+                flex-basis:150px;
+                flex-shrink: 0;
+            }
+            main{
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>생활코딩</h1>
+            </header>
+            <section class="content">
+                <nav>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </nav>
+                <main>
+                    생활코딩은 일반인을 위한 코딩 수업입니다.
+                </main>
+                <aside>
+                    AD
+                </aside>
+            </section>
+            <footer>
+               <a href= "https://www.google.com">홈페이지</a>" 
+            </footer>
+        </div>
+    </body>
+</html>
+
+<!-- Flex로 홈페이지 대충 디자인 해보기 -->
