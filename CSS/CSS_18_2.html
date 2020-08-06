@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex1</title>
+        <meta charset="utf-8">
+        <style>
+            .container{
+                background-color: powderblue;
+                height:200px;
+                display:flex;
+                flex-direction: row;
+                /* flex-direction: column; */
+            }
+            .item{
+                background-color: tomato;
+                color:white;
+                border:1px solid white;
+                flex-grow:1;
+            }
+            .item:nth-child(1){
+                flex-grow:2;
+                flex-basis: 300px;
+                flex-shrink:1;
+
+            }
+            .item:nth-child(1){
+                flex-grow:2;
+                flex-basis: 300px;
+                flex-shrink:1;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>
+
+<!-- nth-child(n)은 n번째 칸을 의미함 -->
+<!-- flex-basis는 수평방향일 땐, 좌우 크기가 200px / 수직방향일 땐, 위아래 높이가 200px을 의미함 -->
+<!-- flex-grow가 0이 아니게 되면, 각각의 element들이 1/n 해서 공간을 나눠가짐 -->
+<!-- flex-shrink는 특정 아이템이 basis 값을 가지고 있을 때, basis 값에서 값을 줄이는 것을 통해 일어남 -->
