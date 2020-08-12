@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Filter</title>
+        <meta charset="utf-8">
+        <style>
+            img{
+                transition: all 1s;
+            }
+            img:hover{
+                -webkit-filter: grayscale(100%) blur(1px);
+                filter: grayscale(100%); 
+            }
+            h1{
+                -webkit-filter: blur(1px);
+                filter: blur(1px);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Computer</h1>
+        <img src ="picture/coding.jpg" alt="">
+    </body>
+</html>
+
+<!-- grayscale == 흑백을 의미함. 100 % - 진짜 흑백, 50% - 반정도 흑백, 0% - 컬러 -->
+<!-- 글자에도 filter 가능 -->
+<!-- blur == 뿌옇게 하는 효과 의미함. 값은 px 단위임 -->
+<!-- transition == 부드럽게 하는 효과 의미. 단위는 초(ex. 1s) -->
+<!-- 참조 : https://css-tricks.com/almanac/properties/f/filter/ -->
