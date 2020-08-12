@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>다단 Nulti Column</title>
+        <meta charset="utf-8">
+        <style>
+            .column{
+                text-align: justify;
+                column-count: 2;
+                column-width:200px;
+                column-gap: 30px;
+                column-rule-style: dashed;
+                column-rule-width: 1px;
+                column-rule-color: red;
+            }
+            h1{
+                column-span: all;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "column">
+            <h1>Lorem</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur tempora sapiente vero dolorum laborum molestiae ab quod, fugiat adipisci at fuga illo similique cumque praesentium esse recusandae, non quas.
+        </div>
+    </body>
+</html>
+
+<!-- column-count : 2는 2개의 단락으로 나누는 것을 의미하며, column-width: 200px은 200px 마다 한 단락씩 나누는 것을 의미함 -->
+<!-- column-count와 column-width를 동시에 사용하면. column-count의 숫자보다 많은 숫자의 단락이 생겨나지 않음 -->
+<!-- column-width 값을 유지하지 못하는 시점에는 column-count의 숫자보다 적은 단락을 유지함으로써, width값을 최대한 보존하려고 함 -->
+<!-- column-gap은 단락과 단락 사이 간격을 넓힘 -->
+<!-- column-rule-style은 dotted일 때는 점선, dashed는 절취선을 의미 -->
+<!-- column-rule-width는 입력한 값 만큼의 선이 만들어지게 됨. -->
+<!-- column-rule-color은 입력한 색깔의 선이 만들어지게 됨 -->
+<!-- column-span: all일 때는 단락에 갇힌 것을 단락에서 빠져나갈 수 있게 함 -->
