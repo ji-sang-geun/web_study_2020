@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>논리연산자</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type ="text/javascript">
+            if(true && true){
+                alert(1);
+            } // 1 출력
+            
+            if(true && false){
+                alert(2);
+            } // 출력 안됨
+
+            if(false && true){
+                alert(3);
+            } // 출력 안됨
+
+            if(false && false){
+                alert(4);
+            } // 출력 안됨
+
+            if(true || true){
+                alert(1);
+            } // 1 출력
+
+            if(true || false){
+                alert(2);
+            } // 2 출력
+
+            if(false || true){
+                alert(3);
+            } // 3 출력
+
+            if(false || false){
+                alert(4);
+            } // 출력 안됨
+
+            if(!true && !true){ // !true == false
+                alert(1);
+            } // 출력 안됨
+            
+            if(!false && !true){ // !false == true
+                alert(2);
+            } // 출력 안됨
+
+            if(!true && !false){
+                alert(3);
+            } // 출력 안됨
+
+            if(!false && !false){
+                alert(4);
+            } // 4 출력
+        </script>
+    </body>
+</html>
+
+<!-- && == AND / || == OR / ! == NOT -->
