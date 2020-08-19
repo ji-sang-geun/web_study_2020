@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boolean의 대체제</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var a;
+
+            if(0){ // 0 == false
+                alert(1); 
+            } // 출력 안됨 -> 최대한 사용하지 말 것.
+            
+            if(1){ // 1 == true
+                alert(2);
+            } // 2 출력 -> 최대한 사용하지 말 것.
+
+            if(!''){ // !을 사용했기 때문에 출력이 됨
+                alert('빈 문자열');
+            } // 빈 문자열 출력
+
+            if(!undefined){ 
+                alert('undefined');
+            } // undefined 출력
+
+            if(!a){
+                alert('값이 할당되지 않은 변수');
+            } // 값이 할당되지 않은 변수 출력
+
+            if(!null){
+                alert('null');
+            } // null 출력
+
+            if(!NaN){
+                alert('NaN');
+            } // NaN 출력
+        </script>
+    </body>
+</html>
+
+<!-- 0은 false로 간주, 0이 아닌 수는 true로 간주 -->
+<!-- 기타 false로 간주되는 데이터 형에는 빈 문자열(''), undefined, 값이 할당되지 않은 변수, null, NaN이 있음 -->
