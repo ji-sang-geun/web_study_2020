@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>==와 === 비교</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+        alert(undefined == null) // true
+        alert(undefined === null) // false
+
+        alert(true == 1) // true
+        alert(true === 1) // false
+
+        alert(true == "1") // true
+        alert(true === "1") // false
+
+        alert(0 === -0) // true
+        alert(NaN === NaN) // false
+        </script>
+    </body>
+</html>
+
+<!-- null과 undefined는 값이 없는 데이터 형 -->
+<!-- null == 값이 없음을 명시적 표현, undefined == 값이 없는 상태 -->
+<!-- NaN은 특수 데이터 형, 숫자가 아니라는 뜻을 가짐 -->
+<!-- ===가 직관적이므로 최대한 사용 권장 -->
