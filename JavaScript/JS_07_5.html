@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>논리연산자를 이용하여 id/pw 구현</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var id = prompt('아이디를 입력해주세요.');
+            var password = prompt('비밀번호를 입력해주세요.');
+
+            if((id == 'sanggeun' || id == 'aboda' || id == 'kwang') && password == '1111'){
+                alert('로그인 성공! ' + id + "님 반갑습니다.");
+            }
+            else if(id == 'sanggeun' || id == 'aboda' || id == 'kwang'){
+                alert('비밀번호가 일치하지 않습니다.');
+            }
+            else if(id != 'sanggeun' || id != 'aboda' || id != 'kwang'){
+                alert('아이디가 일치하지 않습니다.');
+            }
+        </script>
+    </body>
+</html>
+
+<!-- else 최대한 사용하지 않도록 노력해보기. else 사용하면 스파게티 코드가 됨 -->
