@@ -12,8 +12,8 @@
         alert(true == 1) // true
         alert(true === 1) // false
 
-        alert(true == "1") // true
-        alert(true === "1") // false
+        alert(false == "0") // true
+        alert(false === "0") // false
 
         alert(0 === -0) // true
         alert(NaN === NaN) // false
@@ -23,5 +23,8 @@
 
 <!-- null과 undefined는 값이 없는 데이터 형 -->
 <!-- null == 값이 없음을 명시적 표현, undefined == 값이 없는 상태 -->
+<!-- boolean은 true / false로 나타낼 수 있음 -->
+<!-- true == 1 -> O / === 1 -> X -->
+<!-- false == 0 -> O / === 0 -> X -->
 <!-- NaN은 특수 데이터 형, 숫자가 아니라는 뜻을 가짐 -->
 <!-- ===가 직관적이므로 최대한 사용 권장 -->
