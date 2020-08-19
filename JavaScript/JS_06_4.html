@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>부정과 부등호</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+        alert(1 != 2); // true
+        alert(1 != 1); // false
+        alert("one" != "two"); // true
+        alert("one" != "one"); // false
+        
+        alert(1 !== 2) // true
+        alert(1 !== 1) // false
+        alert(2 != "2") // false
+        alert(2 !== "2") // true
+        
+        alert(10 > 20) // false
+        alert(10 > 2) // true
+        alert(10 > 10) // false
+
+        alert(10 >= 20) // false
+        alert(10 >= 1) // true
+        alert(10 >= 10) // true
+
+        alert(10 < 20) // true
+        alert(10 < 2) // false
+        alert(10 < 10) // false
+
+        alert(10 <= 20) // true
+        alert(10 <= 1) // false
+        alert(10 <= 10) // true
+        </script>
+    </body>
+</html>
+
+<!-- !=는 ==의 부정의 의미를 나타냄 / !==는 ===의 부정의 의미를 나타냄 -->
+<!-- >는 좌항이 우항보다 크다면 true, 그렇지 않으면 false를 나타냄 -->
+<!-- <는 좌항이 우항보다 작다면 true, 그렇지 않으면 false를 나타냄 -->
+<!-- >=는 좌항이 우항보다 크거나 같으면 true, 그렇지 않으면 false를 나타냄 -->
+<!-- <=는 좌항이 우항보다 작거나 같으면 true, 그렇지 않으면 false를 나타냄 -->
