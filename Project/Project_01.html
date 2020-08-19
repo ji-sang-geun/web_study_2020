@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Instagram Clone Coding
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <style>
+            *{
+                margin:0px;
+            }
+            a{
+                width:42px;
+            }
+            .head{
+                position:fixed;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(10, 10, 10);   
+                display: flex;
+                justify-content: space-between;
+            }
+            .camera{
+                /* height:35px;
+                width:35px; */
+                font-size: 35px;
+                /* position: absolute; */
+                color: white;
+            }
+            .title{
+                line-height: 35px;
+                text-align: center;
+                color: white;
+            }
+            .play{
+                /* float: right;
+                margin-top:-35px; */
+                /* height:35px;
+                width:35px; */
+                font-size: 35px;
+                color: white;
+            }
+            .line{
+                border-bottom: 1px solid rgb(30, 30, 30);
+            }
+            .story{
+                background-color: rgb(0, 0, 0);
+                height: 80px;
+                overflow-x: scroll;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                margin-top: 34px;
+                /*  */
+            }
+            .story::-webkit-scrollbar{
+                display:none;
+            }
+            .story_padding_first{
+                padding-left: 5px;
+                padding-right: 13px;
+            }
+            .story_padding{
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+            .story_padding_last{
+                padding-left: 13px;
+                padding-right:5px;
+            }
+            .circle_1{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                border-radius: 70%;
+                background-color: white;
+            }
+            .circle_2{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                border-radius: 70%;
+                background-color: white;
+            }
+            .circle_3{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                border-radius: 70%;
+                background-color: white;
+            }
+            .circle_4{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                border-radius: 70%;
+                background-color: white;
+            }
+            .circle_5{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                border-radius: 70%;
+                background-color: white;
+            }
+            .circle_6{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                border-radius: 70%;
+                background-color: white;
+            }
+            .circle_7{
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                border-radius: 70%;
+                background-color: white;
+            }
+            .story_name{
+                color:white;
+                font-size: 10px;
+                text-align: center;
+            }
+            .bottom{
+                background-color: rgb(0, 0, 0);
+                /* height: 1000px; */
+            }
+            .profile{
+                display:flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .profile_file{
+                display:flex;
+                align-items: center;
+            }
+            .profile_circle_1{
+                margin:5px;
+                display: inline-block;
+                width:25px;
+                height:25px;
+                border-radius:70%;
+                background-color:white;
+            }
+            .name_1{
+                color:white;
+                font-size: 12px;
+                font-weight: bolder;
+            }
+            .add{
+                color:white;
+                font-size: 20px;
+            }
+            .picture_1{
+                height:200px;
+                width:375px;
+            }
+            .expression{
+                display: flex;
+                align-items: center;
+            }
+            .picture_2{
+                font-size: 20px;
+                color: white;
+                margin-bottom:5px;
+                margin-left:5px;
+            }
+            .emoticon_number{
+                display: inline-block;
+                color: white;
+                font-size:12px;
+                font-weight: bolder;
+                margin-left:5px;
+                /* margin-bottom:5px; */
+            }
+            .description{
+                display: flex;
+                flex-wrap: nowrap;
+                margin-left:5px;
+            }
+            .write_1{
+                margin-left:5px;
+                color:white;
+                font-size: 12px;
+            }
+            .write_tag_1{
+                margin-left: -45px;
+                color: skyblue;
+            }
+            .detail{
+                display: flex;
+                align-items: center;
+            }
+            .detail_circle_1{
+                margin-left: 5px;
+                margin-right: 5px;
+                width:20px;
+                height:20px;
+                border-radius:70%;
+                background-color:white;
+            }
+            .detail_writing{
+                display: inline-block;
+                color:gray;
+                font-size: 12px;
+            }
+            .time{
+                margin-left: 5px;
+                height:25px;
+                color:gray;
+                font-size: 10px;
+            }
+            .newspeed{
+                overflow-y: scroll;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .newspeed::-webkit-scrollbar{
+                display:none;
+            }
+            .blank{
+                padding-bottom: 36px;
+            }
+            .foot{
+                position: fixed;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(10, 10, 10);   
+                display: flex;
+                justify-content: space-between;
+                left: 0;
+                bottom: 0;
+            }
+            .footer{
+                margin-left: 5px;
+                font-size:35px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <a href="#"><i class="fab fa-instagram camera"></i></a>
+            <div class="title"><h3>Instagram</h3></div>
+            <a href="#"><i class="far fa-paper-plane play"></i></a>
+        </div>
+        <div class="line">
+        </div>
+        <div class="middle">
+            <div class="story" style="-ms-overflow-style: none;">
+                <div class="story_padding_first">
+                <a href="#"><img src="picture/dayoung1.jpg" class="circle_1"></a>
+                <div class="story_name">
+                    내 스토리
+                </div>   
+                </div>
+                <div class="story_padding">
+                <a href="#"><img src="picture/dayoung2.jpg" class="circle_2"></a>
+                <div class="story_name">
+                    일다영
+                </div>   
+                </div>
+                <div class="story_padding">
+                <a href="#"><img src="picture/dayoung3.jpg" class="circle_3"></a>
+                <div class="story_name">
+                    이다영
+                </div>   
+                </div>
+                <div class="story_padding">
+                <a href="#"><img src="picture/dayoung4.jpg" class="circle_4"></a>
+                <div class="story_name">
+                    삼다영
+                </div>   
+                </div>
+                <div class="story_padding">
+                <a href="#"><img src="picture/dayoung5.jpg" class="circle_5"></a>
+                <div class="story_name">
+                    사다영
+                </div>   
+                </div>
+                <div class="story_padding">
+                <a href="#"><img src="picture/dayoung6.jpg" class="circle_6"></a>
+                <div class="story_name">
+                    오다영
+                </div>   
+                </div>
+                <div class="story_padding_last">
+                <a href="#"><img src="picture/heart.jpg" class="circle_7"></a>  
+                <div class="story_name">
+                    육다영
+                </div>   
+                </div>
+            </div>
+            <div class="line">
+            </div>
+        </div>
+        <div class="newspeed" style="-ms-overflow-style: none;">
+            <div class="bottom">
+                <div class="profile">
+                    <div class="profile_file">
+                    <a href="#"><img src="picture/dayoung2.jpg" class="profile_circle_1"></a>
+                    <div class="name_1">
+                        2da00_
+                    </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-h add"></i></a>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="picture/coding.jpg" alt="" class="picture_1"></a>              
+                </div>
+                <div class="emoticon">
+                    <a href="#"><i class="far fa-heart picture_2"></i></a>
+                    <a href="#"><i class="far fa-comment picture_2"></i></a>
+                    <a href="#"><i class="far fa-paper-plane picture_2"></i></a>
+                </div>
+                <div class="expression">
+                    <div class="emoticon_number">
+                        좋아요 20,010,102개
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="name_1">
+                        2da00_ 
+                    </div>
+                    <div class="write_1">
+                        나는 멍청이
+                        <div class="write_tag_1">
+                            #2da00_ #Fact #멍청이 
+                        </div>
+                    </div>
+                </div>
+                <div class="detail">
+                    <a href="#"><img src="picture/dayoung4.jpg" class="detail_circle_1"></a>
+                    <div class="detail_writing">
+                        댓글 달기...
+                    </div>
+                </div>
+                <div class="time">
+                    1일 전
+                </div>
+            </div>
+        </div>
+        <div class="newspeed" style="-ms-overflow-style: none;">
+            <div class="bottom">
+                <div class="profile">
+                    <div class="profile_file">
+                        <a href="#"><img src="picture/dayoung3.jpg" class="profile_circle_1"></a>
+                        <div class="name_1">
+                            3da00_
+                        </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipsis-h add"></i></a>
+                    </div>
+                <div class="picture">
+                    <a href="#"><img src="picture/heart.jpg" alt="" class="picture_1"></a>                  
+                </div>
+                <div class="emoticon">
+                    <a href="#"><i class="far fa-heart picture_2"></i></a>
+                    <a href="#"><i class="far fa-comment picture_2"></i></a>
+                    <a href="#"><i class="far fa-paper-plane picture_2"></i></a>
+                </div>
+                <div class="expression">
+                    <div class="emoticon_number">
+                        좋아요 20,010,102개
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="name_1">
+                        3da00_ 
+                    </div>
+                    <div class="write_1">
+                        나는 바보
+                        <div class="write_tag_1">
+                            #3da00_ #babo #Fact 
+                        </div>
+                    </div>
+                </div>
+                <div class="detail">
+                    <a href="#"><img src="picture/dayoung4.jpg" class="detail_circle_1"></a>
+                    <div class="detail_writing">
+                        댓글 달기...
+                    </div>
+                </div>
+                <div class="time">
+                    2일 전
+                </div>
+            </div>
+        </div>
+        <div class="newspeed" style="-ms-overflow-style: none;">
+            <div class="bottom">
+                <div class="profile">
+                    <div class="profile_file">
+                        <a href="#"><img src="picture/dayoung3.jpg" class="profile_circle_1"></a>
+                        <div class="name_1">
+                            4da00_
+                        </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipsis-h add"></i></a>
+                    </div>
+                <div class="picture">
+                    <img src="picture/dayoung5.jpg" alt="" class="picture_1">               
+                </div>
+                <div class="emoticon">
+                    <a href="#"><i class="far fa-heart picture_2"></i></a>
+                    <a href="#"><i class="far fa-comment picture_2"></i></a>
+                    <a href="#"><i class="far fa-paper-plane picture_2"></i></a>
+                </div>
+                <div class="expression">
+                    <div class="emoticon_number">
+                        좋아요 20,010,102개
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="name_1">
+                        4da00_ 
+                    </div>
+                    <div class="write_1">
+                        나는 바보멍청이
+                        <div class="write_tag_1">
+                            #4da00_ #babo #멍청이 
+                        </div>
+                    </div>
+                </div>
+                <div class="detail">
+                    <img src="picture/dayoung4.jpg" class="detail_circle_1">
+                    </img>
+                    <div class="detail_writing">
+                        댓글 달기...
+                    </div>
+                </div>
+                <div class="time">
+                    3일 전
+                </div>
+                <div class="blank">
+                    
+                </div>
+            </div>
+        </div>
+        <div class ="foot">
+            <a href="#"><i class="fas fa-home footer"></i></a>
+            <a href="#"><i class="fas fa-search footer"></i></a>
+            <a href="#"><i class="far fa-plus-square footer"></i></a>
+            <a href="#"><i class="far fa-heart footer"></i></a>
+            <a href="#"><i class="far fa-user footer"></i></a>
+        </div>
+    </body>
+</html>
