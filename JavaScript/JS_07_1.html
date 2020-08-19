@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boolean과 if</title>
+        <meta charset="utf-8">
+    </head>
+    <Body>
+        <script type="text/javascript">
+            if(true){
+                alert('result : true'); // true 출력
+            }
+
+            if(false){
+                alert('result : true'); // 실행되지 않음
+            } 
+
+            if(true){
+                alert(1);
+                alert(2);
+                alert(3);
+                alert(4);
+            }
+            alert(5); // 1,2,3,4,5 모두 출력
+
+            if(false){
+                alert(1);
+                alert(2);
+                alert(3);
+                alert(4);
+            }
+            alert(5); // 5만 출력
+        </script>
+    </Body>
+</html>
+
+<!-- 조건문과 Boolean은 밀접한 관계 / Boolean은 조건문에서 핵심적인 역할을 담당 -->
+<!-- if문의 조건이 true라면 if의 중괄호 구간이 실행 -->
