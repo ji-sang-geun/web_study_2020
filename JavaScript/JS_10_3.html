@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>배열과 반복문</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function get_members(){
+                return ['egoing','k8805','sanggeun', 'aboda'];
+            }
+
+            members = get_members();
+
+            for(var i = 0; i < members.length; i++){
+                document.write(members[i].toUpperCase()+"<br>");
+            }
+            
+        </script>
+    </body>
+</html>
+
+<!-- members.length는 배열에 담긴 값의 숫자를 알려줌 -->
+<!-- members[i].toUpperCase는 배열의 원소들 중 index의 값이 i인 원소를 대문자로 바꿈 -->
+<!-- toUpperCase()와 같이 언어 안에 기본적으로 존재하는 함수는 내장함수라고 함 -->
+<!-- 직접 구현하는 함수는 사용자 정의 함수라고 함 -->
