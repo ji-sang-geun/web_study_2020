@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>객체</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var grades_1 = {'egoing':10, 'k8805':6, 'sanggeun':20};
+
+            var grades_2 = {};
+            grades_2['egoing'] = 10;
+            grades_2['k8805'] = 6;
+            grades_2['sanggeun'] = 20;
+
+            var grades_3 = new Object();
+            grades_3['egoing'] = 10;
+            grades_3['k8805'] = 6;
+            grades_3['sanggeun'] = 20;
+
+            document.write(grades_1['sanggeun'] + "<br>");
+            document.write(grades_1.sanggeun + "<br>" + "<br>");
+
+            document.write(grades_2['egoing'] + "<br>");
+            document.write(grades_2.egoing + "<br>" + "<br>");
+
+            document.write(grades_3['k8805'] + "<br>");
+            document.write(grades_3.k8805 + "<br>");
+        </script>
+    </body>
+</html>
+
+<!-- 배열과 객체는 데이터를 한번에 모아주는 점에서는 비슷함 -->
+<!-- 하지만, 배열의 index는 0,1,2..로 고정된 반면, 객체는 "first","second"와 같이 우리가 원하는 데이터로 정의 할 수 있음 -->
+<!-- grade 객체에서는 egoing, k8805, sanggeun은 key(index), 10,6,20은 index를 해당되는 value -->
+<!-- ex) grade_1.sanggeun == grade_1['sanggeun'] -->
