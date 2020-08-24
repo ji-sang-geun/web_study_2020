@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>객체지향 프로그래밍</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var grades = {
+                'list': {'egoing' : 10, 'k8805' : 6, 'sanggeun' : 20},
+                'show': function(){
+                    document.write('Hello world');
+                },
+                'this_1': function(){
+                    for (var name in this.list){
+                        document.write(name + " "+ this.list[name]);
+                        document.write('<br>');
+                    }
+                }
+            };
+            document.write(grades['list']['sanggeun'] + "<br>");
+            grades['show']();
+            document.write('<br>');
+            grades['this_1']();
+            document.write('<br>' + '<br>');
+            grades.show();
+            document.write('<br>');
+            grades.this_1();
+        </script>
+    </body>
+</html>
+
+<!-- 객체에는 객체를 담을수도 있고, 함수도 담을 수 있음 -->
+<!-- this == this가 속해있는 객체를 가르키는 변수임 -->
+<!-- for in 문에 적힌 this.list는 list를 가르킴 -->
+<!-- name은 list의 key값을 의미함 -->
+<!-- this.list[name]은 list의 value값을 의미함 -->
