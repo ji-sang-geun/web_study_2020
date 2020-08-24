@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>배열 데이터의 추가</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var li_1 = ['a', 'b', 'c', 'd', 'e'];
+            li_1.push('f');
+            document.write(li_1 + "<br>");
+
+            var li_2 = ['a','b','c','d','e'];
+            li_2= li_2.concat(['f','g']);
+            document.write(li_2 + "<br>");
+
+            var li_3 = ['a','b','c','d','e'];
+            li_3.unshift('z');
+            document.write(li_3 + "<br>");
+
+            var li_4 = ['a','b','c','d','e'];
+            li_4.splice(2,0,'b');
+            document.write(li_4 + "<br>");
+        </script>
+    </body>
+</html>
+
+<!-- 배열.push -> 배열에 데이터를 추가 할 수 있음 -->
+<!-- 배열에 데이터를 한 번에 추가하고싶으면 배열.concat 사용 -->
+<!-- 배열 제일 앞 쪽에 데이터를 추가하고 싶으면 배열.unshift 사용 -->
+<!-- 배열 중간에 데이터를 추가하고 싶으면 배열.splice(index,index에서부터 제거될 원소의 수, 중간에 넣을 배열 원소) 사용 -->
+<!-- 배열.splice는 중간에 제거되는 원소를 반환함 -->
