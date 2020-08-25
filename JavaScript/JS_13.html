@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정규 표현식</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var pattern_1 = /a/; // 정규 표현식 리터럴 형식
+            var pattern_2 = new RegExp('a'); // 정규표현식 객체 생성자
+
+            var pattern_3 = /a./; //.은 여기선 a 다음 문자가 어떤 문자가 와도 인식됨
+            document.write(pattern_3.exec('abcdef')); // ["ab"] 배열 출력
+            document.write(pattern_3.exec('bcdefg')); // null 출력
+            // RegExp.exec() 예제
+            document.write("<br> <br>");
+
+            var pattern_4 = /a/;
+            document.write(pattern_4.test('abcdef')); // true 출력
+            document.wrtie(pattern_4.test('bxdefg')); // false 출력
+            // RegExp.test() 예제
+            document.write("<br> <br>");
+
+            var pattern_5 = /a/;
+            document.write('abcdef'.match(pattern_5)); // ["a"] 배열 출력
+            document.write('bcdefg'.match(pattern_5)); // null 출력
+            // String.match() 예제
+            document.write("<br> <br>");
+
+            var pattern_6 = /a/;
+            document.write('abcdef'.replace(pattern_6,'A')); // Abcdef 출력
+            document.write('bcdefg'.replace(pattern_6,'A')); // bcdefg 출력 (안바뀜)
+            // String.replace() 예제
+            document.write("<br> <br>");
+
+            var i_x = /a/;
+            var i_o = /a/i;
+            document.write("Abcdef".match(i_x)); // null 출력
+            document.write("Abcdef".match(i_o)); // ["A"] 배열 출력
+            // i (대소문자 구분 안함) 예제
+            document.write("<br> <br>");
+
+            var g_x = /a/;
+            var g_o = /a/g;
+            var i_g_o = /a/ig; // i와g 둘다 사용가능 대소문자 구분없이 모든 검색결과 반환
+
+            document.write('abcdefa'.match(g_x)); // ["a"] 배열 요소 하나만 출력
+            document.write('abcdefa'.match(g_o)); // ["a", "a"] 배열 출력
+            document.write('Abcdefa'.match(i_g_o)); // ["A", "a"] 배열 출력
+            // g (모든 검색 결과 반환) 예제
+            document.write("<br> <br>");
+
+            var pattern_6 = /(\w+)\s(\w+)/; // 괄호는 그룹을, \w는 문자를, +는 하나 이상을 \s는 띄어쓰기 즉, 공백을 의미
+            var str = "coding everybody"; 
+            var result = str.replace(pattern_6, "$2, $1"); //$1 == coding, $2 == everybody, "," 옆 공백을 통해 띄어쓰기 대체
+            document.write(result);
+            // 캡처 예제
+            document.write("<br> <br>");
+
+            var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+            var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+            var result = content.replace(urlPattern, function(url){
+                return '<a href="'+url+'">'+url+'</a>'; // content에서 urlPatten을 검색하여 찾은 후 function(url) 즉, a tag에 링크를 넣어 반환 하는 걸로 치환
+            });
+            document.write(result); // 생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. 출력
+            // 치환 예제
+        </script>
+    </body>
+</html>
+
+<!-- 문자열에서 특정한 문자를 찾아내는 도구 -->
+<!-- 수 십 줄의 작업을 한 줄로 표현 가능한 장점이 있음-->
