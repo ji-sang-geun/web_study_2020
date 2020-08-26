@@ -23,4 +23,4 @@ inner_2();
 outter_2(); // coding everybody 출력
 
 // 내부함수는 외부함수의 지역변수에 접근 가능
-// 윗 함수는 inner 함수에서 title을 호출 했는데 outter의 지역변수에 접근하여 값을 출력하는 것을 알 수 있음
+// 윗 함수는 inner 함수에서 title을 호출 했는데 outter의 지역변수에 접근하여 값을 출력하는 것을 알 수 있음 
