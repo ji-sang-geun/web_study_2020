@@ -23,3 +23,5 @@ for(var i = 0; i < process.length; i++){
 }
 document.write(input); // 60.5 출력
 // 함수는 배열의 값으로도 사용 가능
+
+// 함수는 변수, 함수의 매개변수, 리턴값 등 용도로 사용할 수 있는데 이를 first class citizen, 혹은 first class object, first class entity, first class value 등으로 부름 
