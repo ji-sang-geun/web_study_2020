@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>콜백 처리의 위임</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function sortNumber_1(a,b){
+                return a-b; 
+                /*if(a > b){
+                    return 1;
+                } else if(a <= b){
+                    return -1;
+                }과 같음*/ 
+            }
+            var numbers_1 = [20,10,9,8,7,10,5,4,3,2,1];
+            
+            document.write(numbers_1.sort(sortNumber_1)); // 1,2,3,4,5,6,7,8,9,10,20 출력
+            document.write("<br> <br>");
+            
+            function sortNumber_2(a,b){
+                return b-a; //a와 b의 순서를 바꾸면 정렬순서가 반대가 됨
+            }
+            var numbers_2 = [1,2,3,4,5,6,7,8,9,10,20];
+
+            document.write(numbers_2.sort(sortNumber_2)); // 20,10,9,8,7,6,5,4,3,2,1 출력
+        </script>
+</html>
+
+<!-- 값으로 사용될 수 있는 특성을 이용 시 함수의 인자로 함수로 전달 가능 -->
+<!-- 값으로 전달된 함수는 호출될 수 있으므로 함수의 동작을 완전히 바꿀 수 있음 -->
+<!-- 콜백이 가능한 이유는 JS의 함수가 값이기 때문 -->
